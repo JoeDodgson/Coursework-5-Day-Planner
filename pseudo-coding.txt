@@ -12,20 +12,13 @@ DONE -Set up the structure of the page:
 script.js
 DONE -call the current date & time from moment.js.
 DONE -display the current date and time
--do a check against the current time update the text content for each time slot.
--Colour code time slots based on current time:
+DONE -do a check against the current time update the text content for each time slot.
+DONE -Colour code time slots based on current time:
     -grey = past
     -red = present
     -green = future
-Make sure that id's of the time blocks are the whole number of hours (moment.hour) e.g. 9, 10, 11, 12, 13, 14. Then within the display time function, compare the moment.hour against the id (remember to parse id to int). if less than, then apply past class, if equal, apply present class, if greater apply future class
-$(".description").each(function(){
-    let id = parseInt($(this).parent().attr("id"))
-    if(id < moment.hour){
-        $(this).addclass("past")
-    }
-    else if
     
--create data structure to holds text content for all time slots
+-create data structure to hold text content for all time slots
 Way of getting the text entered and the time adjacent to the button being clicked.
 $(.btn).on(click
 var value = $(this).siblings(".description").val();
@@ -43,8 +36,7 @@ $(".description").each(function(){
 
 style.css:
 -Separate out all styling from the html files
--Create past, present future class styling
 
-
-Bonus:
-https://fullcalendar.io/
+General:
+-Comment up everything
+-Put code through a validator

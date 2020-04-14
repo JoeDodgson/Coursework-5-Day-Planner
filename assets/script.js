@@ -12,11 +12,9 @@ function updateDisplay() {
 }
 
 $(document).ready(function(){
+    updateTimeSlotColour();
     updateDisplay();
 });
-
-// currentDay.value = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
-
 
 function updateCurrentDay(){
     var dayDateMonth = moment().format("ddd, Do MMMM YY");
@@ -39,3 +37,9 @@ function updateTimeSlotColour(){
         }
     })
 };
+
+$(".saveBtn").click(function() {
+    var value = $(this).siblings(".description").val();
+    var time = $(this).parent().attr("id");
+    localStorage.setItem(time,value);
+});
