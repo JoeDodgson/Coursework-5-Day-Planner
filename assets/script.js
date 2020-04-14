@@ -2,40 +2,43 @@
 var currentDay = $("#currentDay");
 var currentTime = $("#currentTime");
 
-// Declare functions
-
-function updateDisplay() {
+// Upon loading, update the time slot colours and start updating the display each half a second
+$(document).ready(function(){
+    updateTimeSlotColour();
+    renderDescriptions();
     setInterval(function(){
         updateCurrentDay();
         updateTimeSlotColour();
     }, 500);
-}
-
-$(document).ready(function(){
-    updateTimeSlotColour();
-    updateDisplay();
 });
+
+function updateTimeSlotColour(){
+    $(".description").each(function(){
+        let hourID = parseInt($(this).parent().attr("id"));
+        $(this).removeClass("past present future");
+        if(hourID < moment().hour()){
+            $(this).addClass("past");
+        }else if(hourID === moment().hour()){
+            $(this).addClass("present");
+        }else{
+            $(this).addClass("future");
+        }
+    })
+};
+
+function renderDescriptions(){
+    $(".description").each(function(){
+        let hourID = $(this).parent().attr("id");
+        hourDescription = localStorage.getItem(hourID);
+        $(this).val(hourDescription);
+    })
+};
 
 function updateCurrentDay(){
     var dayDateMonth = moment().format("ddd, Do MMMM YY");
     var hrsMinsSecs = moment().format("h:mm:ss a");
     currentDay.text(dayDateMonth);
     currentTime.text(hrsMinsSecs);
-};
-
-function updateTimeSlotColour(){
-    $(".description").each(function(){
-        let id = parseInt($(this).parent().attr("id"));
-        // console.log(id);
-        $(this).removeClass("past present future");
-        if(id < moment().hour()){
-            $(this).addClass("past");
-        }else if(id === moment().hour()){
-            $(this).addClass("present");
-        }else{
-            $(this).addClass("future");
-        }
-    })
 };
 
 $(".saveBtn").click(function() {
