@@ -1,24 +1,48 @@
 General set up
 DONE -Create the files: index.html, style.css, script.js
--Link the style.css and script.js files to the index.html files
--Link to bootstrap and to moment.js
+DONE -Link the style.css and script.js files to the index.html files
+DONE-Link to bootstrap and to moment.js and jQuery
 
 Index.html
 -Set up the structure of the page: 
-    -Header at top of the page with button to next day and previous day and poss a calendar to be clicked on?
-    -Grid layout for each hour slot
-    -Save button beside each hour slot
+    DONE -Header at top of the page
+    -Grid layout for each hour slot - div class="row" - 1 per time slot. contains: time (col span 1), text content (col span 10) and save button (col span 1)
+
 
 script.js
--create data structure to hold all time slots against each day
--add event listeners onto all buttons:
-    -next / previous day
-    -Calendar?
-    -Save
+-call the current date & time from moment.js.
+-display the current date and time
+-do a check against the current time update the text content for each time slot.
 -Colour code time slots based on current time:
     -grey = past
     -red = present
     -green = future
+Make sure that id's of the time blocks are the whole number of hours (moment.hour) e.g. 9, 10, 11, 12, 13, 14. Then within the display time function, compare the moment.hour against the id (remember to parse id to int). if less than, then apply past class, if equal, apply present class, if greater apply future class
+$(".description").each(function(){
+    let id = parseInt($(this).parent().attr("id"))
+    if(id < moment.hour){
+        $(this).addclass("past")
+    }
+    else if
+    
+
+-create data structure to holds text content for all time slots
+Way of getting the text entered and the time adjacent to the button being clicked.
+$(.btn).on(click
+var value = $(this).siblings(".description").val();
+var time = $(this).parent().attr("id");
+
+Storing the location name (time slot) and text (value) as pairs:
+localStorage.setItem(time,value)
+
+For retrieving the local storage values and displaying into the text area:
+$(".description").each(function(){
+    let id = $(this).parent().attr("id")
+    $(this).val(localStorage.getItem(id));
+  })
+
 
 style.css:
 -Separate out all styling from the html files
+-Create past, present future class styling
+
