@@ -26,7 +26,14 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <div class="row date-row">
+        <p id="currentDay-static" class="col-md-6">Today the date is:</p>
+        <p id="currentDay" class="col-md-6"></p>
+      </div>
+      <div class="row time-row">
+        <p id="currentTime-static" class="col-md-6">The current time is:</p>
+        <p id="currentTime" class="col-md-6"></p>
+      </div>
     </header>
 
     <div class="time-container">
@@ -107,7 +114,7 @@
         <div class="col-md-1 hour">
           5PM
         </div>
-        <textarea class="col-md-10 description">
+        <textarea class="col-md-10 description last-block">
         </textarea>
         <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>

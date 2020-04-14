@@ -74,5 +74,40 @@ body {
   }
 
   .time-container{
-    margin: 0% 10% 0% 10%;
+    margin: 0% 10% 32px 10%;
+  }
+
+  #currentDay-static, #currentTime-static {
+    display: inline;
+    float: left;
+    font-size: 28px;
+    margin: 0px;
+    text-align: right;
+    width: 45%;
+  }
+  
+  #currentDay, #currentTime {
+    display: inline;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0px;
+    text-align: left;
+    width: 45%;
+  }
+
+  .last-block{
+    border-bottom: 1px solid black;
+  }
+
+  .date-row, .time-row {
+    height: 50px;
+  }
+  
+  .date-row {
+    margin-top: 25px;
+  }
+
+  .jumbotron {
+    padding-bottom: 45px;
   }
