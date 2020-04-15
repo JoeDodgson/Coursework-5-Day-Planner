@@ -23,5 +23,5 @@ DONE -Responsiveness
 
 General:
 DONE -Comment up everything
--Put code through a validator
--Write the readme
+DONE -Put code through a validator
+DONE -Write the readme
