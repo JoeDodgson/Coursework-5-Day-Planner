@@ -19,7 +19,9 @@ DONE -Colour code time slots based on current time:
     -green = future
 DONE -add event listener for the submit button to store the time description in local storage as key-value pairs
 DONE -display the descriptions saved in local storage
+DONE -Responsiveness
 
 General:
--Comment up everything
+DONE -Comment up everything
 -Put code through a validator
+-Write the readme
