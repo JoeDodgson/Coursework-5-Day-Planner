@@ -23,27 +23,37 @@
   </head>
 
   <body>
+    <!-- Header at the top of the page -->
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <div class="row date-row">
-        <p id="currentDay-static" class="col-md-6">Today the date is:</p>
+
+      <!-- Display of the today's date -->
+      <div class="row current-date-row">
+        <p id="currentDay-static" class="col-md-6">Today's date is:</p>
         <p id="currentDay" class="col-md-6"></p>
       </div>
-      <div class="row time-row">
+
+      <!-- Display of the current time -->
+      <div class="row current-time-row">
         <p id="currentTime-static" class="col-md-6">The current time is:</p>
         <p id="currentTime" class="col-md-6"></p>
       </div>
     </header>
 
-    <div class="time-container">
-        
+    <!-- Main section container for the planner -->
+    <main class="planner-container">
+      
+      <!-- One div for each of the 9 time blocks -->
       <div id="9" class="row time-block">
+        <!-- Static text to state which time block this is -->
         <div class="col-md-1 hour">
           9AM
         </div>
+        <!-- Where user writes their text -->
         <textarea class="col-md-10 description">
         </textarea>
+        <!-- Button to save content -->
         <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
 
@@ -119,7 +129,7 @@
         <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
 
-    </div>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

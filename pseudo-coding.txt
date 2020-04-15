@@ -17,25 +17,8 @@ DONE -Colour code time slots based on current time:
     -grey = past
     -red = present
     -green = future
-    
--create data structure to hold text content for all time slots
-Way of getting the text entered and the time adjacent to the button being clicked.
-$(.btn).on(click
-var value = $(this).siblings(".description").val();
-var time = $(this).parent().attr("id");
-
-Storing the location name (time slot) and text (value) as pairs:
-localStorage.setItem(time,value)
-
-For retrieving the local storage values and displaying into the text area:
-$(".description").each(function(){
-    let id = $(this).parent().attr("id")
-    $(this).val(localStorage.getItem(id));
-  })
-
-
-style.css:
--Separate out all styling from the html files
+DONE -add event listener for the submit button to store the time description in local storage as key-value pairs
+DONE -display the descriptions saved in local storage
 
 General:
 -Comment up everything

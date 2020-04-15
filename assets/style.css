@@ -74,7 +74,7 @@ body {
     transition: all .3s ease-in-out;
   }
 
-  .time-container{
+  .planner-container{
     margin: 0% 10% 32px 10%;
   }
 
@@ -101,11 +101,11 @@ body {
     border-bottom: 1px solid black;
   }
 
-  .date-row, .time-row {
+  .current-date-row, .current-time-row {
     height: 50px;
   }
   
-  .date-row {
+  .current-date-row {
     margin-top: 25px;
   }
 
