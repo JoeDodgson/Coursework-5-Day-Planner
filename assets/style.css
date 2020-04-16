@@ -47,15 +47,13 @@ textarea{
 }
 
 .time-block{
-  text-align: center;
+  white-space:nowrap !important;
   border-radius: 15px;
 }
 
 .hour {
-  background-color: #ffffff;
-  color: #000000;
   border-top: 1px dashed #000000;
-  text-align: center;
+  padding-top: 30px;
 }
 
 .description{
@@ -105,6 +103,7 @@ textarea{
 .past {
   background-color: #d3d3d3;
   color: black;
+  text-decoration: line-through;
 }
 
 .present {
@@ -120,15 +119,21 @@ textarea{
 
 /* Media queries to make the page responsive on smaller screen sizes */
 @media (min-width: 768px) and (max-width: 2000px){
-  .hour{
-    padding: 0;
-  }
-
   #currentDay-static, #currentDay, #currentTime-static, #currentTime {
     font-size: 28px;
   }
 
   .display-3 {
     font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1px) and (max-width: 575px){
+  .hour, .saveBtn{
+    width: 20% !important;
+  }
+
+  .description{
+    width: 60% !important;
   }
 }
